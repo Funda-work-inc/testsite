@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="シナモンカフェへのお問い合わせ">
+  <title>お問い合わせ | シナモンカフェ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="container flex flex-row flex-center gap-8" style="padding: 2rem 0 1rem 0;">
+    <span class="heading-lg text-primary" style="flex:1;">シナモンカフェ</span>
+    <a href="index.html" class="btn-outline">ホーム</a>
+    <a href="menu.html" class="btn-outline">メニュー</a>
+    <a href="contact.html" class="btn-outline">お問い合わせ</a>
+  </nav>
+
+  <!-- お問い合わせセクション -->
+  <section class="section bg-cream">
+    <div class="container">
+      <h1 class="heading-lg text-center" style="margin-bottom:2rem;">お問い合わせ</h1>
+      <div class="flex flex-row gap-8" style="flex-wrap:wrap;align-items:flex-start;">
+        <!-- 店舗情報 -->
+        <div class="card" style="flex:1;min-width:260px;max-width:350px;">
+          <h2 class="heading-md text-primary" style="margin-bottom:1rem;">店舗情報</h2>
+          <p style="margin-bottom:0.5rem;">東京都中央区コーヒーストリート123<br>中央駅3番出口より徒歩5分</p>
+          <p style="margin-bottom:0.5rem;">営業時間：月〜金 7:30〜21:00<br>土日祝 8:00〜22:00</p>
+          <p style="margin-bottom:0.5rem;">電話：03-1234-5678</p>
+          <p style="margin-bottom:0.5rem;">メール：hello@cinnamoncafe.com</p>
+          <img src="https://placehold.jp/300x120.png?text=地図" alt="地図" class="responsive" style="margin-top:1rem;">
+        </div>
+        <!-- お問い合わせフォーム -->
+        <div class="card" style="flex:2;min-width:260px;max-width:500px;">
+          <h2 class="heading-md text-primary" style="margin-bottom:1rem;">メッセージを送る</h2>
+          <form>
+            <div style="margin-bottom:1rem;">
+              <label for="name">お名前</label><br>
+              <input type="text" id="name" name="name" required style="width:100%;padding:0.5rem;border-radius:0.5rem;border:1px solid #ccc;">
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label for="email">メールアドレス</label><br>
+              <input type="email" id="email" name="email" required style="width:100%;padding:0.5rem;border-radius:0.5rem;border:1px solid #ccc;">
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label for="subject">件名</label><br>
+              <select id="subject" name="subject" required style="width:100%;padding:0.5rem;border-radius:0.5rem;border:1px solid #ccc;">
+                <option value="">件名を選択してください</option>
+                <option value="一般のお問い合わせ">一般のお問い合わせ</option>
+                <option value="ご予約">ご予約</option>
+                <option value="ご意見・ご感想">ご意見・ご感想</option>
+                <option value="ケータリング">ケータリング</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label for="message">メッセージ</label><br>
+              <textarea id="message" name="message" rows="5" required style="width:100%;padding:0.5rem;border-radius:0.5rem;border:1px solid #ccc;"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">送信</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="section bg-primary text-cream text-center" style="padding:2rem 0 1rem 0;">
+    <div class="container">
+      <p>&copy; 2024 シナモンカフェ. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html> 

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="上質なコーヒーと手作りペイストリーの和モダンカフェ">
+  <title>シナモンカフェ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="container flex flex-row flex-center gap-8" id="main-nav">
+    <span class="heading-lg text-primary" style="flex:1;">シナモンカフェ</span>
+    <button id="nav-toggle" aria-label="メニュー" style="display:none;background:none;border:none;font-size:2rem;cursor:pointer;z-index:20;">
+      &#9776;
+    </button>
+    <div id="nav-links" style="display:flex;gap:2rem;">
+      <a href="index.html" class="btn-outline">ホーム</a>
+      <a href="menu.html" class="btn-outline">メニュー</a>
+      <a href="contact.html" class="btn-outline">お問い合わせ</a>
+    </div>
+  </nav>
+  <script>
+    // ハンバーガーメニューの表示・非表示制御
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    function checkNav() {
+      if(window.innerWidth <= 600) {
+        navToggle.style.display = 'block';
+        navLinks.style.display = navToggle.classList.contains('open') ? 'flex' : 'none';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '60px';
+        navLinks.style.right = '0';
+        navLinks.style.background = '#fff';
+        navLinks.style.boxShadow = '0 2px 16px rgba(0,0,0,0.07)';
+        navLinks.style.width = '180px';
+        navLinks.style.padding = '1rem';
+        navLinks.style.borderRadius = '0.75rem';
+        navLinks.style.zIndex = '10';
+        Array.from(navLinks.children).forEach(link => {
+          link.style.margin = '0.5rem 0';
+        });
+      } else {
+        navToggle.style.display = 'none';
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'row';
+        navLinks.style.position = 'static';
+        navLinks.style.background = 'none';
+        navLinks.style.boxShadow = 'none';
+        navLinks.style.width = 'auto';
+        navLinks.style.padding = '0';
+        navLinks.style.borderRadius = '0';
+        navLinks.style.zIndex = 'auto';
+        Array.from(navLinks.children).forEach(link => {
+          link.style.margin = '0 1rem 0 0';
+        });
+      }
+    }
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.style.display = navToggle.classList.contains('open') ? 'flex' : 'none';
+    });
+    window.addEventListener('resize', checkNav);
+    window.addEventListener('DOMContentLoaded', checkNav);
+  </script>
+
+  <!-- ヒーローセクション -->
+  <section class="section bg-primary text-cream text-center" style="position:relative; background: url('./public/images/FV/ice.png') center/cover no-repeat; min-height:400px; display:flex; align-items:center;">
+    <div class="container" style="position:relative; z-index:2; background:rgba(80,50,20,0.45); border-radius:1rem; padding:2rem 1rem; max-width:700px; margin:auto;">
+      <h1 class="heading-xl" style="margin-bottom:1rem;">心温まる<span class="text-secondary">くつろぎの</span>空間</h1>
+      <p style="font-size:1.2rem; margin-bottom:2rem;">丁寧に淹れたコーヒーと手作りのペイストリーを、まるで我が家のようなくつろぎの空間でお楽しみください。</p>
+      <a href="menu.html" class="btn">メニューを見る</a>
+    </div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(80,50,20,0.25);z-index:1;"></div>
+  </section>
+
+  <!-- お知らせセクション -->
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-lg text-center" style="margin-bottom:1.5rem;">お知らせ</h2>
+      <ul class="news-list" style="max-width:600px;margin:0 auto 2rem auto;list-style:none;padding:0;">
+        <li style="margin-bottom:1.2rem;"><a href="news-detail-01.html" style="text-decoration:none;color:inherit;display:block;padding:0.5rem 0;">
+          <span class="text-secondary" style="font-size:0.95rem;">2024/06/10</span>　新メニュー「抹茶ラテ」登場！
+        </a></li>
+        <li style="margin-bottom:1.2rem;"><a href="news-detail-02.html" style="text-decoration:none;color:inherit;display:block;padding:0.5rem 0;">
+          <span class="text-secondary" style="font-size:0.95rem;">2024/06/05</span>　営業時間変更のお知らせ
+        </a></li>
+        <li style="margin-bottom:1.2rem;"><a href="news-detail-03.html" style="text-decoration:none;color:inherit;display:block;padding:0.5rem 0;">
+          <span class="text-secondary" style="font-size:0.95rem;">2024/06/01</span>　季節限定スイーツ販売開始
+        </a></li>
+        <li style="margin-bottom:1.2rem;"><a href="news-detail-04.html" style="text-decoration:none;color:inherit;display:block;padding:0.5rem 0;">
+          <span class="text-secondary" style="font-size:0.95rem;">2024/05/28</span>　臨時休業のお知らせ（6/2）
+        </a></li>
+        <li style="margin-bottom:1.2rem;"><a href="news-detail-05.html" style="text-decoration:none;color:inherit;display:block;padding:0.5rem 0;">
+          <span class="text-secondary" style="font-size:0.95rem;">2024/05/20</span>　スタッフ募集のお知らせ
+        </a></li>
+      </ul>
+      <div class="text-center">
+        <a href="news.html" class="btn-outline">もっと見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ストーリー -->
+  <section class="section">
+    <div class="container flex flex-col flex-center gap-8">
+      <div class="flex flex-col flex-center" style="flex:1;">
+        <h2 class="heading-lg text-center" style="margin-bottom:1rem;">私たちのストーリー</h2>
+        <p class="text-center" style="max-width:600px; margin-bottom:1.5rem;">シナモンカフェは、コーヒーの芸術と温かなコミュニティを融合させたいという夢から生まれました。2018年、タナカ ユキがヨーロッパ各地でバリスタ修行を積み、帰国後に幼なじみでパティシエのヤマモト ヒロと共に創業しました。「シナモン」という名前は、温もり・安らぎ・日常の小さな幸せを象徴しています。</p>
+      </div>
+      <img src="./public/images/story/story1.png" alt="創業者" class="responsive" style="max-width:600px;">
+    </div>
+  </section>
+
+  <!-- バリュー -->
+  <section class="section bg-cream">
+    <div class="container">
+      <h2 class="heading-lg text-center" style="margin-bottom:2rem;">私たちのこだわり</h2>
+      <div class="flex flex-row flex-center gap-8" style="flex-wrap:wrap;">
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/kodawari/kodawari1.png" alt="品質へのこだわり" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm text-primary">品質へのこだわり</h3>
+          <p>最高品質の豆と素材を厳選し、すべての一杯・一皿に期待以上の体験をお届けします。</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/kodawari/kodawari2.png" alt="コミュニティ" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm text-primary">コミュニティ</h3>
+          <p>カフェは人と人がつながる場所。温かな交流と笑顔が生まれる空間を大切にしています。</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/kodawari/kodawari3.png" alt="情熱" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm text-primary">情熱</h3>
+          <p>コーヒーと食への愛情を、豆からカップまで、すべてに注いでいます。</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <h3 class="heading-sm text-primary">職人技</h3>
+          <p>一杯一皿を丁寧に、職人の技と心で仕上げています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スタッフ紹介 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-lg text-center" style="margin-bottom:2rem;">スタッフ紹介</h2>
+      <div class="flex flex-row flex-center gap-8" style="flex-wrap:wrap;">
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/staff/tanaka.png" alt="バリスタ タナカ ユキ" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm">タナカ ユキ</h3>
+          <p class="text-primary">創業者・ヘッドバリスタ</p>
+          <p style="font-size:0.95rem;">ヨーロッパ各地で修行後、日本に帰国しカフェを創業。コーヒープログラム全体を監修し、最高品質の一杯を提供します。</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/staff/yamamoto.png" alt="パティシエ ヤマモト ヒロ" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm">ヤマモト ヒロ</h3>
+          <p class="text-primary">共同創業者・パティシエ</p>
+          <p style="font-size:0.95rem;">パリでのクラシックな修行経験を活かし、カフェの看板ペイストリーを手掛けています。</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:200px;">
+          <img src="./public/images/staff/nakamura.png" alt="カフェマネージャー ナカムラ メイ" class="responsive" style="max-width:120px;margin:0 auto 1rem;">
+          <h3 class="heading-sm">ナカムラ メイ</h3>
+          <p class="text-primary">カフェマネージャー</p>
+          <p style="font-size:0.95rem;">お客様を笑顔でお迎えし、快適な時間をお届けするカフェ運営の要です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section class="section bg-cream">
+    <div class="container flex flex-col flex-center gap-4">
+      <h2 class="heading-lg text-center">アクセス</h2>
+      <p class="text-center">東京都中央区コーヒーストリート123<br>中央駅3番出口より徒歩5分</p>
+      <img src="https://placehold.jp/600x250.png?text=地図" alt="地図" class="responsive" style="max-width:400px;">
+      <p class="text-center">営業時間：月〜金 7:30〜21:00／土日祝 8:00〜22:00<br>電話：03-1234-5678　メール：hello@cinnamoncafe.com</p>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="section bg-primary text-cream text-center" style="padding:2rem 0 1rem 0;">
+    <div class="container">
+      <a href="tel:03-1234-5678" class="btn btn-call" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:1.1rem;margin-bottom:1rem;background:var(--color-success);color:#fff;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .23 2.07.36 3.18.36a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.13 2.18.36 3.18a1 1 0 01-.27.91l-2.2 2.2z"/></svg>
+        お問い合わせ（電話する）
+      </a>
+      <p>&copy; 2024 シナモンカフェ. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- フローティング電話ボタン -->
+  <a href="tel:03-1234-5678" class="floating-call-btn" aria-label="電話でお問い合わせ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27c1 .23 2.07.36 3.18.36a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.11.13 2.18.36 3.18a1 1 0 01-.27.91l-2.2 2.2z"/></svg>
+    電話でお問い合わせ
+  </a>
+</body>
+</html>

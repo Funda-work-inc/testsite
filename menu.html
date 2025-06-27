@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="シナモンカフェのメニュー一覧">
+  <title>メニュー | シナモンカフェ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ナビゲーション -->
+  <nav class="container flex flex-row flex-center gap-8" style="padding: 2rem 0 1rem 0;">
+    <span class="heading-lg text-primary" style="flex:1;">シナモンカフェ</span>
+    <a href="index.html" class="btn-outline">ホーム</a>
+    <a href="menu.html" class="btn-outline">メニュー</a>
+    <a href="contact.html" class="btn-outline">お問い合わせ</a>
+  </nav>
+
+  <!-- メニューセクション -->
+  <section class="section bg-cream">
+    <div class="container">
+      <h1 class="heading-lg text-center" style="margin-bottom:2rem;">メニュー</h1>
+      <p class="text-center" style="margin-bottom:2.5rem;">厳選された素材と愛情を込めて作る、こだわりのドリンクとお食事をご用意しております。</p>
+      <div class="flex flex-row flex-center gap-8" style="flex-wrap:wrap;">
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="./public/images/menu/sinamon.png" alt="シナモンラテ" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">シナモンラテ <span class="text-primary" style="font-size:1rem;">¥580</span></h3>
+          <p style="font-size:0.95rem;">自家製シナモンシロップとバニラの香りが特徴の看板メニュー</p>
+          <span class="btn" style="background:var(--color-accent);font-size:0.85rem;margin-top:0.5rem;">人気</span>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="./public/images/menu/esupureso.png" alt="エスプレッソ" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">エスプレッソ <span class="text-primary" style="font-size:1rem;">¥420</span></h3>
+          <p style="font-size:0.95rem;">厳選された豆を使用したダブルショット</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="./public/images/menu/macharate.png" alt="抹茶ラテ" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">抹茶ラテ <span class="text-primary" style="font-size:1rem;">¥620</span></h3>
+          <p style="font-size:0.95rem;">上質な抹茶を使用した本格的な一杯</p>
+          <span class="btn" style="background:var(--color-accent);font-size:0.85rem;margin-top:0.5rem;">人気</span>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="https://images.pexels.com/photos/267308/pexels-photo-267308.jpeg?auto=compress&w=300&q=80" alt="シナモンロール" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">シナモンロール <span class="text-primary" style="font-size:1rem;">¥540</span></h3>
+          <p style="font-size:0.95rem;">秘伝のレシピで作る自家製シナモンロール、クリームチーズフロスティング添え</p>
+          <span class="btn" style="background:var(--color-accent);font-size:0.85rem;margin-top:0.5rem;">人気</span>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&w=300&q=80" alt="アボカドトースト" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">アボカドトースト <span class="text-primary" style="font-size:1rem;">¥780</span></h3>
+          <p style="font-size:0.95rem;">サワードウブレッドに新鮮なアボカド、チェリートマト、マイクログリーンを添えて</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&w=300&q=80" alt="煎茶" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">煎茶 <span class="text-primary" style="font-size:1rem;">¥520</span></h3>
+          <p style="font-size:0.95rem;">甘みのある香り高い日本の伝統的な緑茶</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="https://images.pexels.com/photos/1291712/pexels-photo-1291712.jpeg?auto=compress&w=300&q=80" alt="季節のフルーツタルト" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">季節のフルーツタルト <span class="text-primary" style="font-size:1rem;">¥620</span></h3>
+          <p style="font-size:0.95rem;">バタークリームのタルトに季節の新鮮なフルーツを贅沢にトッピング</p>
+        </div>
+        <div class="card text-center" style="flex:1;min-width:220px;max-width:260px;">
+          <img src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&w=300&q=80" alt="キヌアボウル" class="responsive" style="margin-bottom:1rem;">
+          <h3 class="heading-sm">キヌアボウル <span class="text-primary" style="font-size:1rem;">¥820</span></h3>
+          <p style="font-size:0.95rem;">キヌアと季節の焼き野菜、タヒニドレッシングで仕上げた栄養満点のボウル</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="section bg-primary text-cream text-center" style="padding:2rem 0 1rem 0;">
+    <div class="container">
+      <p>&copy; 2024 シナモンカフェ. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html> 
